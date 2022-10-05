@@ -42,7 +42,7 @@ source venv/bin/activate
 ```bash
 python -m pip install --upgrade pip 
 ```
-### Ставим зависимости из requirements.txt:
+### Установка зависимости из requirements.txt:
 ```bash
 pip install -r api_yamdb/requirements.txt 
 ```
@@ -74,7 +74,7 @@ sudo systemctl enable docker
 ```bash
 sudo systemctl start docker
 ```
-### Смотрим статус (выдаст статус, много букв):
+### Мониторинг статус:
 ```bash
 sudo systemctl status docker
 ```
@@ -124,15 +124,6 @@ docker-compose exec web python manage.py dumpdata > dumpPostrgeSQL.json
 ### Останавливаем контейнеры:
 ```bash
 docker-compose down -v 
-```
-### Шаблон наполнения .env (не включен в текущий репозиторий) расположенный по пути infra/.env
-```
-DB_ENGINE=django.db.backends.postgresql 
-DB_NAME=postgres 
-POSTGRES_USER=postgres 
-POSTGRES_PASSWORD=postgres 
-DB_HOST=db 
-DB_PORT=5432 
 ```
 ### Документация API YaMDb 
 Документация доступна по эндпойнту: http://localhost:8000/redoc/
